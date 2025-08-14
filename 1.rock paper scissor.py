@@ -15,10 +15,49 @@
 #            2          2      draw
 
 import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+images = {
+    "rock": rock,
+    "paper": paper,
+    "scissors": scissors
+}
+
+
+choices = ["rock", "paper", "scissors"]
 user_input=int(input("enter a number between 0 1 and 2:"))
+print("you choose", choices[user_input])
+print(images[choices[user_input]])
 computer_input=random.randint(0,2)
-print("computer choose")
-print(computer_input,end=" ")
+print("computer choose",end=' ')
+print(computer_input)
+print("computer choose", choices[computer_input])
+# print(rps_images.images[choices[computer_input]])
 if user_input>=3:
     print("just exit")
 else:
