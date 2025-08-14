@@ -4,15 +4,15 @@
 # scissor wins against paper
 # paper wins against rock
 # combinations you vs computer win
-#              0        0     draw
-#              0        1     computer
-#              0        2     you
-#              1         0    you
-#              1         1    draw
-#              1        2       computer
-#              2        0       computer
-#             2         1      you
-#            2          2      draw
+#              0         0     draw
+#              0         1     computer
+#              0         2     you
+#              1         0     you
+#              1         1     draw
+#              1         2     computer
+#              2         0     computer
+#              2         1      you
+#              2         2       draw
 
 import random
 rock = '''
@@ -57,6 +57,7 @@ computer_input=random.randint(0,2)
 print("computer choose",end=' ')
 print(computer_input)
 print("computer choose", choices[computer_input])
+print(images[choices[computer_input]])
 # print(rps_images.images[choices[computer_input]])
 if user_input>=3:
     print("just exit")
